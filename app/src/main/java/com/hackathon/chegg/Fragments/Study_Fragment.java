@@ -2,7 +2,9 @@ package com.hackathon.chegg.Fragments;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,11 @@ import com.hackathon.chegg.R;
  * create an instance of this fragment.
  */
 public class Study_Fragment extends Fragment {
+
+    private CardView science;
+    private CardView engg;
+    private CardView tech;
+    private CardView maths;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +68,49 @@ public class Study_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_study_, container, false);
+        View view = inflater.inflate(R.layout.fragment_study_, container, false);
+
+        science = view.findViewById(R.id.ScienceCard);
+        maths = view.findViewById(R.id.MathsCard);
+        tech = view.findViewById(R.id.TechnologyCard);
+        engg = view.findViewById(R.id.EngineeringCard);
+
+        science.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new ScienceFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        tech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new TechFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        engg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new EnggFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        maths.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new MathFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        return view;
     }
 }
