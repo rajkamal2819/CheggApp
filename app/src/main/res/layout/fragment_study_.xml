@@ -31,7 +31,8 @@
                     android:layout_height="wrap_content"
                     android:text="Science"
                     android:textColor="@color/white"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
                     android:layout_marginLeft="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -60,7 +61,8 @@
                     android:layout_height="wrap_content"
                     android:text="Technology"
                     android:textColor="@color/white"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
                     android:layout_marginLeft="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -89,7 +91,8 @@
                     android:layout_height="wrap_content"
                     android:text="Engineering"
                     android:textColor="@color/white"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
                     android:layout_marginLeft="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
@@ -118,7 +121,8 @@
                     android:layout_height="wrap_content"
                     android:text="Maths"
                     android:textColor="@color/white"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
                     android:layout_marginLeft="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
