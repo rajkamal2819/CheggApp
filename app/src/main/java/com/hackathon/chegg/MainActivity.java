@@ -2,7 +2,6 @@ package com.hackathon.chegg;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.fragment.NavHostFragment;
 
 
 import android.os.Bundle;
@@ -50,5 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+
     }
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.hackathon.chegg.Adapters.FragmentAdapter;
+import com.hackathon.chegg.databinding.ActivityAuthenticationBinding;
 
 public class Authentication extends AppCompatActivity {
 
@@ -17,30 +18,33 @@ public class Authentication extends AppCompatActivity {
     private static final String TAG = Authentication.class.getSimpleName();
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    FloatingActionButton gbutton;
+
+    ActivityAuthenticationBinding binding;
+    FloatingActionButton googleAuthBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
+        binding = ActivityAuthenticationBinding.inflate(getLayoutInflater());
 
         viewPager = findViewById(R.id.viewpager);
         tabLayout = findViewById(R.id.tabLayout);
+        googleAuthBtn = findViewById(R.id.google_auth_button);
 
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        gbutton = findViewById(R.id.google_auth_button);
-        gbutton.setOnClickListener(new View.OnClickListener() {
+        googleAuthBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                startActivity(new Intent(Authentication.this,MainActivity.class));
-
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
-    }
 
+
+    }
 
 
 }
