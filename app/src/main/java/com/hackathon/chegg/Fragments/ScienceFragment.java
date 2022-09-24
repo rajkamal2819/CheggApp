@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hackathon.chegg.Augmented;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -43,7 +44,7 @@ public class ScienceFragment extends Fragment {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Information.class));
+                startActivity(new Intent(getActivity(), Augmented.class));
             }
         });
         return v;
