@@ -4,26 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/astronomy"
     tools:context=".Information">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/chemistry"/>-+
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/chemistry"/>
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_margin="20dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#80EDA5A5"
             android:background="@drawable/button_shape"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Information"
+                android:textColor="#FFFFFF"
                 style="@style/TextAppearance.Material3.BodyLarge"
                 android:textSize="30dp"
                 android:layout_marginLeft="110dp"/>
@@ -32,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
                 android:text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempo eaque exercitationem rerum voluptates eius facere accusantium dolor neque mollitia labore quos temporibus. Rem inventore modi consequatur reprehenderit impedit molestias autem quisquam minus doloribus, magnam delectus itaque tempore a deserunt omnis laborum quidem quas sequi reiciendis nulla velit exercitationem. Magnam facilis sequi suscipit, non consectetur praesentium soluta ipsum dolores earum. Delectus corporis vitae tempora, aliquam maiores in rem magnam veniam odit fuga, facilis quos!"
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -39,14 +51,20 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/temp_icon"
+      android:layout_marginTop="400dp"
+   android:layout_marginRight="20dp"
+        android:contentDescription=""
+        android:text="Click Here to view AR"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="600dp"
-        android:layout_marginRight="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
