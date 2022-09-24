@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_authentication.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_information.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
@@ -13,11 +14,21 @@
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_study_.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_tech.xml" value="0.25416666666666665" />
+=======
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_asto.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_bones.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_botany.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_chem.xml" value="0.20052083333333334" />
+>>>>>>> c82a2d7254355fd50855efd48e37b45732cfee0b
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_engg.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_engine.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_math.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_science.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_shapes.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_study_.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_tech.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_tools.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/module_list_view.xml" value="0.176" />
       </map>
     </option>
   </component>
