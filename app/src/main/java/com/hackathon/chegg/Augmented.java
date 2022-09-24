@@ -30,15 +30,15 @@ public class Augmented extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference modelRef = storage.getReference().child("human_heart.glb");
+        StorageReference modelRef = storage.getReference().child("earth (1).glb");
         try {
-            File file = File.createTempFile("out", "glb");
+            File file = File.createTempFile("earth (1)", "glb");
 
             modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @RequiresApi(api = Build.VERSION_CODES.N)
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-
+                     Toast.makeText(Augmented.this,"Downloaded and filed",Toast.LENGTH_LONG).show();
                     buildModel(file);
 
                 }
@@ -47,6 +47,7 @@ public class Augmented extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         ArFragment arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
 
 
@@ -71,6 +72,7 @@ public class Augmented extends AppCompatActivity {
                 .setSource(this, Uri.parse(file.getPath()), RenderableSource.SourceType.GLB)
                 .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                 .build();
+        Toast.makeText(Augmented.this,"1 done",Toast.LENGTH_LONG).show();
 
         ModelRenderable
                 .builder()
