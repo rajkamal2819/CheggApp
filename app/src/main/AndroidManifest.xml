@@ -16,7 +16,9 @@
             android:exported="false" />
         <activity
             android:name=".Authentication"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true"
+            >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

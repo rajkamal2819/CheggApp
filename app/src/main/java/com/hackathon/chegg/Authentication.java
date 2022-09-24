@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.hackathon.chegg.Adapters.FragmentAdapter;
 import com.hackathon.chegg.databinding.ActivityAuthenticationBinding;
 
@@ -25,6 +26,10 @@ public class Authentication extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        }
         setContentView(R.layout.activity_authentication);
         binding = ActivityAuthenticationBinding.inflate(getLayoutInflater());
 

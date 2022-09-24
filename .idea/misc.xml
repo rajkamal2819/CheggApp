@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_authentication.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_information.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_engg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_log_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_math.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_profile_.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_study_.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/CheggApp/app/src/main/res/layout/fragment_tech.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_engg.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_math.xml" value="0.20052083333333334" />
         <entry key="..\:/Users/Umang Singh/OneDrive/Documents/GitHub/CheggApp/app/src/main/res/layout/fragment_science.xml" value="0.20052083333333334" />

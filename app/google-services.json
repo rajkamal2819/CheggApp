@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82667318780",
+    "project_id": "chegg-app-e661d",
+    "storage_bucket": "chegg-app-e661d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82667318780:android:f37bed3020c8fbded09679",
+        "android_client_info": {
+          "package_name": "com.hackathon.chegg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82667318780-eke5kq436crvt1fs2vej69ajdgk7d9vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuaJ7Yahz8mXX7YYtYHYJSlljUNCH9KJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82667318780-eke5kq436crvt1fs2vej69ajdgk7d9vv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
