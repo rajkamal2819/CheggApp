@@ -1,29 +1,31 @@
-package com.hackathon.chegg.Fragments;
+package com.hackathon.chegg.STEMSubject;
 
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.R;
-import com.hackathon.chegg.STEMSubject.EngineFragment;
-import com.hackathon.chegg.STEMSubject.ShapesFragment;
-import com.hackathon.chegg.STEMSubject.ToolsFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link EnggFragment#newInstance} factory method to
+ * Use the {@link BonesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EnggFragment extends Fragment {
+public class BonesFragment extends Fragment implements ModuleAdapter.onClickListener{
 
-    private CardView engine;
-    private CardView tools;
+    private List<String> nameL;
+    private ModuleAdapter mModuleAdapter;
+    private RecyclerView rv;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,7 @@ public class EnggFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public EnggFragment() {
+    public BonesFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +46,11 @@ public class EnggFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment EnggFragment.
+     * @return A new instance of fragment BonesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static EnggFragment newInstance(String param1, String param2) {
-        EnggFragment fragment = new EnggFragment();
+    public static BonesFragment newInstance(String param1, String param2) {
+        BonesFragment fragment = new BonesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,28 +71,33 @@ public class EnggFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_engg, container, false);
-        engine = view.findViewById(R.id.EngineCard);
-        tools = view.findViewById(R.id.ToolsCard);
+        View view = inflater.inflate(R.layout.fragment_bones, container, false);
 
-        engine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new EngineFragment(), "NewFragmentTag");
-                ft.commit();
-            }
-        });
+        rv = view.findViewById(R.id.bonesrv);
 
-        tools.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new ToolsFragment(), "NewFragmentTag");
-                ft.commit();
-            }
-        });
+        nameL = new ArrayList<>();
+        nameL.add("Bones");
+        nameL.add("Bones");
+        nameL.add("Bones");
+        nameL.add("Bones");
+        nameL.add("Bones");
+
+
+        mModuleAdapter = new ModuleAdapter(nameL,this);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
+        rv.setLayoutManager(gridLayoutManager);
+        rv.setAdapter(mModuleAdapter);
 
         return view;
+    }
+
+    @Override
+    public void onItemClick(int position) {
+
+    }
+
+    @Override
+    public void onLongClick(int position) {
+
     }
 }

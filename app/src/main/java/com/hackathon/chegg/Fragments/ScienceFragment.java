@@ -16,6 +16,10 @@ import com.hackathon.chegg.R;
 
 public class ScienceFragment extends Fragment {
 
+    private CardView chem;
+    private CardView bones;
+    private CardView botany;
+
 
 
     public ScienceFragment() {

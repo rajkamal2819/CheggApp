@@ -2,13 +2,16 @@ package com.hackathon.chegg.Fragments;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.R;
+import com.hackathon.chegg.STEMSubject.EngineFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +19,8 @@ import com.hackathon.chegg.R;
  * create an instance of this fragment.
  */
 public class TechFragment extends Fragment {
+
+    private CardView astro;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +66,19 @@ public class TechFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tech, container, false);
+        View view = inflater.inflate(R.layout.fragment_tech, container, false);
+
+        astro = view.findViewById(R.id.AstroCard);
+
+        astro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new EngineFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        return view;
     }
 }
