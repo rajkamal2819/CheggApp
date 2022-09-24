@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-<<<<<<< HEAD
+
 buildscript {
     ext.kotlin_version = '1.6.10'
     repositories {
@@ -17,7 +17,7 @@ buildscript {
     }
 }
 
-=======
+
 
 buildscript {
 
@@ -35,19 +35,14 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
->>>>>>> 3988f94b85a9c1f7b7f6c48ea6b4df8a31127e7a
+
 plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
 }
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 3988f94b85a9c1f7b7f6c48ea6b4df8a31127e7a
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
