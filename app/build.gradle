@@ -4,6 +4,12 @@ plugins {
 
 android {
     compileSdk 32
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
 
     buildFeatures {
         viewBinding true
@@ -11,12 +17,13 @@ android {
 
     defaultConfig {
         applicationId "com.hackathon.chegg"
-        minSdk 21
-        targetSdk 32
+        minSdk 24
+        targetSdk 28
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -40,4 +47,14 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+
+    implementation 'com.google.ar.sceneform:assets:1.15.0'
+
+//    implementation "com.gorisse.thomas.sceneform:sceneform:1.21.0"
+
+
 }
+apply plugin: 'com.google.gms.google-services'
