@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974600645640",
+    "project_id": "chegg-dcabf",
+    "storage_bucket": "chegg-dcabf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974600645640:android:014d84388d573a62d1b5bd",
+        "android_client_info": {
+          "package_name": "com.hackathon.chegg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974600645640-rsa7kfriagr0ftef71590u8m98togtgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL8fzbgRWu-1IZ-4kmcf2OXvOhBV1DK0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974600645640-rsa7kfriagr0ftef71590u8m98togtgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
