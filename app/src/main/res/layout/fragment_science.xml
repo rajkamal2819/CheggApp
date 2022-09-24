@@ -24,15 +24,16 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/chemistry">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chemistry"
+                        android:layout_marginBottom="3dp"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"
+                        android:layout_gravity="bottom"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
@@ -41,38 +42,39 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/TechnologyCard"
-                android:elevation="10dp"
+                android:id="@+id/OsteologyCard"
+                app:cardElevation="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="15dp"
                 android:layout_margin="10dp"
                 android:padding="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:background="@drawable/astronomy">
+                    android:layout_height="100dp"
+                    android:background="@drawable/bones_bg">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Astronomy"
+                        android:text="Osteology"
+                        android:layout_marginBottom="3dp"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"
+                        android:layout_gravity="bottom"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
-
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/EngineeringCard"
+                android:id="@+id/BotanyCard"
                 app:cardElevation="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,15 +84,16 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/plants">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Botany"
+                        android:layout_marginBottom="3dp"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"
+                        android:layout_gravity="bottom"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
