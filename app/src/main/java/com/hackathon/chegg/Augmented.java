@@ -30,9 +30,9 @@ public class Augmented extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference modelRef = storage.getReference().child("earth (1).glb");
+        StorageReference modelRef = storage.getReference().child("structure_of_liquid_water.glb");
         try {
-            File file = File.createTempFile("earth (1)", "glb");
+            File file = File.createTempFile("structure_of_liquid_water", "glb");
 
             modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @RequiresApi(api = Build.VERSION_CODES.N)
