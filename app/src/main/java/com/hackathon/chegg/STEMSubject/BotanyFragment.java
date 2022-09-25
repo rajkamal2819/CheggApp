@@ -1,5 +1,6 @@
 package com.hackathon.chegg.STEMSubject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,11 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
+import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +28,7 @@ import java.util.Map;
  */
 public class BotanyFragment extends Fragment implements ModuleAdapter.onClickListener {
 
-    private List<String> nameL;
+    private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
 
@@ -77,14 +81,13 @@ public class BotanyFragment extends Fragment implements ModuleAdapter.onClickLis
         rv = view.findViewById(R.id.botanyrv);
 
         nameL = new ArrayList<>();
-        nameL.add("Botany");
-        nameL.add("Botany");
-        nameL.add("Botany");
-        nameL.add("Botany");
-        nameL.add("Botany");
+        nameL.add(new ModuleModel("Rafflesia arnoldii","rafflesia_arnoldii_flower","Rafflesia_arnoldii"));
 
 
-        mModuleAdapter = new ModuleAdapter(nameL,this);
+
+
+        List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
+        mModuleAdapter = new ModuleAdapter(names,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
@@ -94,7 +97,10 @@ public class BotanyFragment extends Fragment implements ModuleAdapter.onClickLis
 
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(getActivity(), Information.class);
+        intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
+        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        startActivity(intent);
     }
 
     @Override

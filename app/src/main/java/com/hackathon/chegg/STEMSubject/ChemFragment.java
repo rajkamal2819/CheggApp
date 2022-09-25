@@ -1,5 +1,6 @@
 package com.hackathon.chegg.STEMSubject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
+import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +27,7 @@ import java.util.List;
  */
 public class ChemFragment extends Fragment implements ModuleAdapter.onClickListener {
 
-    private List<String> nameL;
+    private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
 
@@ -76,14 +80,16 @@ public class ChemFragment extends Fragment implements ModuleAdapter.onClickListe
         rv = view.findViewById(R.id.chemrv);
 
         nameL = new ArrayList<>();
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
+        nameL.add(new ModuleModel("DDT","ddt_molecule","DDT"));
+        nameL.add(new ModuleModel("Uranium","element_con_uranium","Uranium"));
+        nameL.add(new ModuleModel("Structure of Ice","structure_of_ice","Ice"));
+        nameL.add(new ModuleModel("Structure of Liquid water","structure_of_liquid_water","Liquid_water_content"));
+        nameL.add(new ModuleModel("Periodic Table","the_3d_periodic_table","Periodic_table"));
 
 
-        mModuleAdapter = new ModuleAdapter(nameL,this);
+        List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
+
+        mModuleAdapter = new ModuleAdapter(names,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2, GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
@@ -93,7 +99,10 @@ public class ChemFragment extends Fragment implements ModuleAdapter.onClickListe
 
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(getActivity(), Information.class);
+        intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
+        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        startActivity(intent);
     }
 
     @Override

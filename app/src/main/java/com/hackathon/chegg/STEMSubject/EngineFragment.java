@@ -1,5 +1,6 @@
 package com.hackathon.chegg.STEMSubject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
+import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +27,7 @@ import java.util.List;
  */
 public class EngineFragment extends Fragment implements ModuleAdapter.onClickListener{
 
-    private List<String> nameL;
+    private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
 
@@ -76,14 +80,13 @@ public class EngineFragment extends Fragment implements ModuleAdapter.onClickLis
         rv = view.findViewById(R.id.enginerv);
 
         nameL = new ArrayList<>();
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
+        nameL.add(new ModuleModel("Watt steam engine","ddt_molecule","Watt_steam_engine"));
+        nameL.add(new ModuleModel("3 Cylinder","three_cylinder_motorcycle_engine","Motorcycle_engine"));
+        nameL.add(new ModuleModel("Steam Engine","steam_engine","Steam_engine"));
+        nameL.add(new ModuleModel("Jet Engine","jet_engine","Jet_engine"));
 
-
-        mModuleAdapter = new ModuleAdapter(nameL,this);
+        List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
+        mModuleAdapter = new ModuleAdapter(names,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2, GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
@@ -93,7 +96,10 @@ public class EngineFragment extends Fragment implements ModuleAdapter.onClickLis
 
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(getActivity(), Information.class);
+        intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
+        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        startActivity(intent);
     }
 
     @Override

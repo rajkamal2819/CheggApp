@@ -1,5 +1,6 @@
 package com.hackathon.chegg.STEMSubject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,62 +13,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
+import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AstoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class AstoFragment extends Fragment implements ModuleAdapter.onClickListener {
 
     public static final String TAG = "AstroFragment";
-    private List<String> nameL;
+    public static final String NAME = "name_of_module";
+    public static final String MODEL = "name_of_model";
+    private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AstoFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AstoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AstoFragment newInstance(String param1, String param2) {
-        AstoFragment fragment = new AstoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,14 +41,16 @@ public class AstoFragment extends Fragment implements ModuleAdapter.onClickListe
         rv = view.findViewById(R.id.astrorv);
 
         nameL = new ArrayList<>();
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
-        nameL.add("Umang");
+        nameL.add(new ModuleModel("Moon","the_moon","Moon"));
+        nameL.add(new ModuleModel("Earth","earth (1)","Earth"));
+        nameL.add(new ModuleModel("Mars","mars (1)","Mars"));
+        nameL.add(new ModuleModel("Neptune","neptune new","Neptune"));
+        nameL.add(new ModuleModel("Solar System","Solar System","Solar_System"));
+
+        List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
 
 
-        mModuleAdapter = new ModuleAdapter(nameL,this);
+        mModuleAdapter = new ModuleAdapter(names,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
@@ -96,6 +61,10 @@ public class AstoFragment extends Fragment implements ModuleAdapter.onClickListe
 
     @Override
     public void onItemClick(int position) {
+        Intent intent = new Intent(getActivity(), Information.class);
+        intent.putExtra(NAME,nameL.get(position).getWikiname());
+        intent.putExtra(MODEL,nameL.get(position).getModel());
+        startActivity(intent);
         Log.d(TAG, "onItemClick: "+position);
     }
 
