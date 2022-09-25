@@ -51,7 +51,7 @@ public class ScienceFragment extends Fragment {
             }
         });
 
-        bones= v.findViewById(R.id.ScienceCard);
+        bones= v.findViewById(R.id.OsteologyCard);
         bones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,7 @@ public class ScienceFragment extends Fragment {
             }
         });
 
-        botany= v.findViewById(R.id.ScienceCard);
+        botany= v.findViewById(R.id.BotanyCard);
         botany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

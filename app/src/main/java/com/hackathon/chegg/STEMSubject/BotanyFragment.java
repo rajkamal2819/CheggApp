@@ -82,8 +82,14 @@ public class BotanyFragment extends Fragment implements ModuleAdapter.onClickLis
 
         nameL = new ArrayList<>();
         nameL.add(new ModuleModel("Rafflesia arnoldii","rafflesia_arnoldii_flower","Rafflesia_arnoldii"));
-
-
+        nameL.add(new ModuleModel("Pine Tree","pine_tree","Pine_tree"));
+        nameL.add(new ModuleModel("Taxodium distichum","bald_cypress","Taxodium_distichum"));
+        nameL.add(new ModuleModel("Oak Tree","oak_trees","Oak"));
+        nameL.add(new ModuleModel("Fern","ferns_lowpoly_model","Fern"));
+        nameL.add(new ModuleModel("Maple Tree","maple_tree","Maple"));
+        nameL.add(new ModuleModel("Banana Tree","banana_tree_low_poly","Banana"));
+        nameL.add(new ModuleModel("Monstera Tree","monstera_tree","Monstera"));
+        nameL.add(new ModuleModel("Lavandula","lavender","Lavandula"));
 
 
         List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());

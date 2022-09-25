@@ -48,6 +48,5 @@ public class InfoDataClass {
         });
 
         MySingleton.getInstance(context).addToRequestQueue(request);
-
     }
 }
