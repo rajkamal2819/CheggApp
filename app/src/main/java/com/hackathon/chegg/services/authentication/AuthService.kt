@@ -61,7 +61,7 @@ class AuthService(val auth: FirebaseAuth) {
 
                     } else {
                         // If sign in fails, display a message to the user.
-                        Log.w("SignInFail", "signInWithEmail:failure", task.exception)
+                        Log.w("SignInFail",task.exception?.message.toString())
                         Toast.makeText(context, "Authentication failed.",
                             Toast.LENGTH_SHORT).show()
 

@@ -12,6 +12,7 @@ buildscript {
     dependencies {
 
         // Add the dependency for the Google services Gradle plugin
+        classpath 'com.android.tools.build:gradle:3.6.1'
         classpath 'com.google.gms:google-services:4.3.14'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -19,22 +20,22 @@ buildscript {
 
 
 
-buildscript {
-
-    repositories {
-        google()
-        jcenter()
-
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
-        classpath 'com.google.gms:google-services:4.3.3'
-
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
+//buildscript {
+//
+//    repositories {
+//        google()
+//        jcenter()
+//
+//    }
+//    dependencies {
+//
+//        classpath 'com.google.gms:google-services:4.3.3'
+//
+//
+//        // NOTE: Do not place your application dependencies here; they belong
+//        // in the individual module build.gradle files
+//    }
+//}
 
 plugins {
     id 'com.android.application' version '7.1.2' apply false

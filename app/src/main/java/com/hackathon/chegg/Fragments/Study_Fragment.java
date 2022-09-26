@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -78,36 +79,65 @@ public class Study_Fragment extends Fragment {
         science.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new ScienceFragment(), "NewFragmentTag");
-                ft.commit();
+                FragmentManager fm=getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction().
+                        replace(R.id.fragment_container, new ScienceFragment(), "NewFragmentTag")
+                        .setReorderingAllowed(true)
+                        .addToBackStack("scienceFragment")
+                        .commit();
+
+
             }
         });
 
         tech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new TechFragment(), "NewFragmentTag");
-                ft.commit();
+
+                FragmentManager fm=getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction().
+                replace(R.id.fragment_container, new TechFragment(), "NewFragmentTag")
+                        .setReorderingAllowed(true)
+                        .addToBackStack("studyFragment")
+                        .commit();
+
             }
         });
 
         engg.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new EnggFragment(), "NewFragmentTag");
-                ft.commit();
+
+                FragmentManager fm=getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction().
+                        replace(R.id.fragment_container, new EnggFragment(), "NewFragmentTag")
+                        .setReorderingAllowed(true)
+                        .addToBackStack("engFragment")
+                        .commit();
+
+
             }
         });
 
         maths.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new MathFragment(), "NewFragmentTag");
-                ft.commit();
+
+                FragmentManager fm=getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction().
+                        replace(R.id.fragment_container, new MathFragment(), "NewFragmentTag")
+                        .setReorderingAllowed(true)
+                        .addToBackStack("mathFragment")
+                        .commit();
+
+
             }
         });
 
