@@ -1,5 +1,6 @@
 package com.hackathon.chegg.STEMSubject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
+import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,8 +27,9 @@ import java.util.List;
  */
 public class BonesFragment extends Fragment implements ModuleAdapter.onClickListener{
 
-    private List<String> nameL;
+    private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
+    private List<String> wikinames;
     private RecyclerView rv;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -76,14 +81,16 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
         rv = view.findViewById(R.id.bonesrv);
 
         nameL = new ArrayList<>();
-        nameL.add("Bones");
-        nameL.add("Bones");
-        nameL.add("Bones");
-        nameL.add("Bones");
-        nameL.add("Bones");
+        nameL.add(new ModuleModel("Femur","human_femur","Femur"));
+        nameL.add(new ModuleModel("Heart","human_heart","Heart"));
+        nameL.add(new ModuleModel("Sacrum","human_sacrum","Sacrum"));
+        nameL.add(new ModuleModel("Thoracic vertebrae","human_thoracic_vertebra_t5_or_t6","Thoracic_vertebrae"));
 
 
-        mModuleAdapter = new ModuleAdapter(nameL,this);
+        List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
+
+
+        mModuleAdapter = new ModuleAdapter(names,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
@@ -93,7 +100,10 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
 
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(getActivity(), Information.class);
+        intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
+        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        startActivity(intent);
     }
 
     @Override

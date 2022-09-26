@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hackathon.chegg.R;
+import com.hackathon.chegg.STEMSubject.AstoFragment;
 import com.hackathon.chegg.STEMSubject.EngineFragment;
 
 /**
@@ -74,7 +75,7 @@ public class TechFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container, new EngineFragment(), "NewFragmentTag");
+                ft.replace(R.id.fragment_container, new AstoFragment(), "NewFragmentTag");
                 ft.commit();
             }
         });

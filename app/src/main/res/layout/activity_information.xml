@@ -6,61 +6,88 @@
     android:layout_height="match_parent"
     android:background="@drawable/astronomy"
     tools:context=".Information">
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <ImageView
+
+        <LinearLayout
+            android:id="@+id/mainll"
+
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/chemistry"/>
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="5dp"
-            android:backgroundTint="#80EDA5A5"
-            android:background="@drawable/button_shape"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Information"
-                android:textColor="#FFFFFF"
-                style="@style/TextAppearance.Material3.BodyLarge"
-                android:textSize="30dp"
-                android:layout_marginLeft="110dp"/>
-            <TextView
-                android:padding="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempo eaque exercitationem rerum voluptates eius facere accusantium dolor neque mollitia labore quos temporibus. Rem inventore modi consequatur reprehenderit impedit molestias autem quisquam minus doloribus, magnam delectus itaque tempore a deserunt omnis laborum quidem quas sequi reiciendis nulla velit exercitationem. Magnam facilis sequi suscipit, non consectetur praesentium soluta ipsum dolores earum. Delectus corporis vitae tempora, aliquam maiores in rem magnam veniam odit fuga, facilis quos!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel cupiditate praesentium corrupti corporis quos perspiciatis dolore iure dicta! Vitae, magni neque rerum doloribus enim ex ea beatae numquam expedita, esse repudiandae? Obcaecati nemo quod quis. Facilis doloribus obcaecati ut non, sapiente laborum natus mollitia, nihil, commodi ex assumenda reprehenderit adipisci magnam vel illum? Magnam cum recusandae minus, quibusdam voluptate provident omnis pariatur earum minima accusamus eius alias ea blanditiis, eos quas iste dolorem numquam. Maxime expedita hic facilis tenetur. Esse possimus quo inventore minima, assumenda error ab fugit quasi necessitatibus praesentium? Aliquam itaque numquam magnam ad, repellendus voluptatum molestiae nesciunt?"
-                />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/chemistry" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="#80EDA5A5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="Information"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempo eaque exercitationem rerum voluptates eius facere accusantium dolor neque mollitia labore quos temporibus. Rem inventore modi consequatur reprehenderit impedit molestias autem quisquam minus doloribus, magnam delectus itaque tempore a deserunt omnis laborum quidem quas sequi reiciendis nulla velit exercitationem. Magnam facilis sequi suscipit, non consectetur praesentium soluta ipsum dolores earum. Delectus corporis vitae tempora, aliquam maiores in rem magnam veniam odit fuga, facilis quos!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel cupiditate praesentium corrupti corporis quos perspiciatis dolore iure dicta! Vitae, magni neque rerum doloribus enim ex ea beatae numquam expedita, esse repudiandae? Obcaecati nemo quod quis. Facilis doloribus obcaecati ut non, sapiente laborum natus mollitia, nihil, commodi ex assumenda reprehenderit adipisci magnam vel illum? Magnam cum recusandae minus, quibusdam voluptate provident omnis pariatur earum minima accusamus eius alias ea blanditiis, eos quas iste dolorem numquam. Maxime expedita hic facilis tenetur. Esse possimus quo inventore minima, assumenda error ab fugit quasi necessitatibus praesentium? Aliquam itaque numquam magnam ad, repellendus voluptatum molestiae nesciunt?"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    </LinearLayout>
+            </LinearLayout>
 
 
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/linearprogressbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorSize="50dp"
+        app:circularflow_radiusInDP="50dp"
+        app:trackCornerRadius="60dp"
+        android:layout_marginLeft="170dp"
+        style="@style/Widget.App.CircularProgressIndicator"
+        app:indicatorColor="#E2F805"
+        android:tooltipText="Geting the content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-      android:layout_marginTop="400dp"
+      android:layout_marginTop="470dp"
    android:layout_marginRight="20dp"
         android:contentDescription=""
         android:text="Click Here to view AR"

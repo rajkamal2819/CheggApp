@@ -3,9 +3,12 @@ package com.hackathon.chegg;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -23,30 +26,36 @@ import java.io.IOException;
 
 public class Augmented extends AppCompatActivity {
 //change
+public LinearLayout l;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_augmented);
+        l= findViewById(R.id.progress_circularll);
+        l.setVisibility(View.VISIBLE);
+        Intent i = getIntent();
+        String model = i.getStringExtra("model");
         FirebaseApp.initializeApp(this);
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference modelRef = storage.getReference().child("human_heart.glb");
+        StorageReference modelRef = storage.getReference().child(model+".glb");
         try {
-            File file = File.createTempFile("out", "glb");
+            File file = File.createTempFile(model, "glb");
 
             modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @RequiresApi(api = Build.VERSION_CODES.N)
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-
+//                     Toast.makeText(Augmented.this,"Downloaded and filed",Toast.LENGTH_LONG).show();
                     buildModel(file);
 
                 }
             });
-
+//hello
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         ArFragment arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
 
 
@@ -71,6 +80,7 @@ public class Augmented extends AppCompatActivity {
                 .setSource(this, Uri.parse(file.getPath()), RenderableSource.SourceType.GLB)
                 .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                 .build();
+//        Toast.makeText(Augmented.this,"1 done",Toast.LENGTH_LONG).show();
 
         ModelRenderable
                 .builder()
@@ -78,8 +88,10 @@ public class Augmented extends AppCompatActivity {
                 .setRegistryId(file.getPath())
                 .build()
                 .thenAccept(modelRenderable -> {
-                    Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();;
+//                    Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();;
                     renderable = modelRenderable;
+                    l.setVisibility(View.INVISIBLE);
+
                 });
 
     }
