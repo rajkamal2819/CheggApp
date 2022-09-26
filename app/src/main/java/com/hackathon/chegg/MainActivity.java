@@ -6,14 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
-import android.app.Fragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hackathon.chegg.Fragments.Analysis_Fragment;
 import com.hackathon.chegg.Fragments.Profile_Fragment;
-import com.hackathon.chegg.Fragments.SignUpFragment;
 import com.hackathon.chegg.Fragments.Study_Fragment;
-import com.hackathon.chegg.Fragments.Test_Fragment;
+import com.hackathon.chegg.Fragments.tests.Test_Fragment;
 
 public class MainActivity extends AppCompatActivity {
 
