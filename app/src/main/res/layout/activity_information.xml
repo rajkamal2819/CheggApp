@@ -15,9 +15,8 @@
 
         <LinearLayout
             android:id="@+id/mainll"
-
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -87,11 +86,10 @@
         android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-      android:layout_marginTop="470dp"
-   android:layout_marginRight="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
         android:contentDescription=""
-        android:text="Click Here to view AR"
+        android:text="View in AR"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

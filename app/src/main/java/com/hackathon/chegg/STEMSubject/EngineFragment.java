@@ -80,7 +80,7 @@ public class EngineFragment extends Fragment implements ModuleAdapter.onClickLis
         rv = view.findViewById(R.id.enginerv);
 
         nameL = new ArrayList<>();
-        nameL.add(new ModuleModel("Watt steam engine","ddt_molecule","Watt_steam_engine"));
+        nameL.add(new ModuleModel("Watt steam engine","model_of_the_watt_steam_engine_with_animation","Watt_steam_engine"));
         nameL.add(new ModuleModel("3 Cylinder","three_cylinder_motorcycle_engine","Motorcycle_engine"));
         nameL.add(new ModuleModel("Steam Engine","steam_engine","Steam_engine"));
         nameL.add(new ModuleModel("Jet Engine","jet_engine","Jet_engine"));
