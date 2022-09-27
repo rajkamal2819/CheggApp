@@ -20,7 +20,7 @@ android {
     defaultConfig {
         applicationId "com.hackathon.chegg"
         minSdk 24
-        targetSdk 28
+        targetSdk 32
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -64,6 +64,7 @@ dependencies {
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
 
     implementation 'com.google.ar.sceneform:assets:1.15.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 //    implementation "com.gorisse.thomas.sceneform:sceneform:1.21.0"
 
