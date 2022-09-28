@@ -85,6 +85,11 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
         nameL.add(new ModuleModel("Heart","human_heart","Heart"));
         nameL.add(new ModuleModel("Sacrum","human_sacrum","Sacrum"));
         nameL.add(new ModuleModel("Thoracic vertebrae","human_thoracic_vertebra_t5_or_t6","Thoracic_vertebrae"));
+        nameL.add(new ModuleModel("Pygmy hippopotamus","pygmy_hippopotamus","Pygmy_hippopotamus"));
+        nameL.add(new ModuleModel("Armadillo","armadillo","Armadillo"));
+        nameL.add(new ModuleModel("Greater mouse-eared bat","myotis_myotis","Greater_mouse-eared_bat"));
+        nameL.add(new ModuleModel("Blue Whale","nhm_blue_whale_6k","Blue_whale"));
+        nameL.add(new ModuleModel("Human Skull","rojo-hs-1___human_skull","Skull#Humans"));
 
 
         List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());

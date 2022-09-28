@@ -85,6 +85,13 @@ public class ChemFragment extends Fragment implements ModuleAdapter.onClickListe
         nameL.add(new ModuleModel("Structure of Ice","structure_of_ice","Ice"));
         nameL.add(new ModuleModel("Structure of Liquid water","structure_of_liquid_water","Liquid_water_content"));
         nameL.add(new ModuleModel("Periodic Table","the_3d_periodic_table","Periodic_table"));
+        nameL.add(new ModuleModel("Aspirin Acetylsalicylic Acid","aspirin_acetylsalicylic_acid_molecule","Aspirin"));
+        nameL.add(new ModuleModel("Acetic Acid","acetic_acid_ethanoic_acid_molecule","Acetic_acid"));
+        nameL.add(new ModuleModel("Formic Acid","formic_acid_methanoic_acid_molecule","Formic_acid"));
+        nameL.add(new ModuleModel("Phenol","phenol_molecule","Phenol"));
+        nameL.add(new ModuleModel("Glucose","glucose_molecule","Glucose"));
+        nameL.add(new ModuleModel("Sucrose","sucrose_molecule","Sucrose"));
+
 
 
         List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
