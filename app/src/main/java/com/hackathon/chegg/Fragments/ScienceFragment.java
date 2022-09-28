@@ -17,6 +17,7 @@ import com.hackathon.chegg.R;
 import com.hackathon.chegg.STEMSubject.AstoFragment;
 import com.hackathon.chegg.STEMSubject.BonesFragment;
 import com.hackathon.chegg.STEMSubject.BotanyFragment;
+import com.hackathon.chegg.STEMSubject.ChemFragment;
 
 
 public class ScienceFragment extends Fragment {
@@ -47,7 +48,10 @@ public class ScienceFragment extends Fragment {
         chem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Augmented.class));
+//                startActivity(new Intent(getActivity(), Augmented.class));
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new ChemFragment(), "NewFragmentTag");
+                ft.commit();
             }
         });
 
