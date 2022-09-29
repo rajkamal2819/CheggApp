@@ -39,7 +39,7 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
     @Override
     public void onBindViewHolder(@NonNull ModuleViewHolder holder, int position) {
         holder.moduleName.setText(modulesList.get(position));
-        holder.moduleImage.setImageResource(R.drawable.engine);
+        //holder.moduleImage.setImageResource(R.drawable.engine);
     }
 
     @Override
@@ -50,13 +50,13 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
     public class ModuleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView moduleName;
-        ImageView moduleImage;
+        //ImageView moduleImage;
         onClickListener mOnClickListener;
 
         public ModuleViewHolder(@NonNull View itemView, onClickListener OnClickListener) {
             super(itemView);
             moduleName = itemView.findViewById(R.id.modulName);
-            moduleImage = itemView.findViewById(R.id.moduleImage);
+            //moduleImage = itemView.findViewById(R.id.moduleImage);
             mOnClickListener = OnClickListener;
             itemView.setOnClickListener(this);
         }
