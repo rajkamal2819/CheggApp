@@ -37,7 +37,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="-30dp"
                 android:gravity="center_horizontal"
-                android:text="Astrology"
+                android:text="Astronomy"
                 android:textColor="@color/colorprimary"
                 android:textSize="21sp"
                 android:textStyle="bold" />
