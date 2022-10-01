@@ -15,9 +15,9 @@
         android:enabled="true"
         android:icon="@drawable/ic_baseline_assignment_24"
         android:title="Test"/>
-    <item
-        android:id="@+id/Profile"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_person_24"
-        android:title="Profile"/>
+<!--    <item-->
+<!--        android:id="@+id/Profile"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_person_24"-->
+<!--        android:title="Profile"/>-->
 </menu>

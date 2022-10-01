@@ -19,44 +19,44 @@
 
         >
 
-      <com.google.android.material.card.MaterialCardView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:backgroundTint="@color/blue_500"
-          >
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              >
-              <com.google.android.material.textview.MaterialTextView
-                  android:layout_marginStart="20dp"
-                  android:layout_marginTop="20dp"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:fontFamily="@font/poppins_bold"
-                  android:text="Test Yourself"
-                  android:textColor="@color/white"
-                  android:textSize="27dp"
-                  />
-              <com.google.android.material.textview.MaterialTextView
-                  android:layout_marginStart="20dp"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorprimary"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Test Yourself"
+                    android:textColor="@color/white"
+                    android:textSize="27dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_marginStart="20dp"
 
 
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-                  android:text="Select a topic"
-                  android:textColor="@color/white"
-                  android:textSize="17dp"
-                  />
-
-
-
-          </LinearLayout>
+                    android:text="Select a topic"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    />
 
 
-      </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
 
 
 
