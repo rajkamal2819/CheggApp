@@ -1,5 +1,7 @@
 package com.hackathon.chegg.STEMSubject;
 
+import static com.hackathon.chegg.STEMSubject.AstoFragment.MODEL;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.BookActivity;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -31,6 +35,7 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
     private ModuleAdapter mModuleAdapter;
     private List<String> wikinames;
     private RecyclerView rv;
+    private FloatingActionButton btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -99,7 +104,15 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
-
+        btn = view.findViewById(R.id.books_bones);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), BookActivity.class);
+                i.putExtra(MODEL,"osteology");
+                startActivity(i);
+            }
+        });
         return view;
     }
 
@@ -107,7 +120,7 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
     public void onItemClick(int position) {
         Intent intent = new Intent(getActivity(), Information.class);
         intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
-        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        intent.putExtra(MODEL,nameL.get(position).getModel());
         startActivity(intent);
     }
 

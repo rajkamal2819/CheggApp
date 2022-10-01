@@ -31,7 +31,9 @@
             android:text="Chemistry"/>
 
     </LinearLayout>
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chemrv"
         android:layout_width="match_parent"
@@ -39,10 +41,10 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:id="@+id/books_chem"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="450dp"
         android:layout_marginLeft="290dp"
         android:src="@drawable/ic_baseline_library_books_24"
         android:layout_height="wrap_content"/>
-
+</RelativeLayout>
 
 </LinearLayout>
