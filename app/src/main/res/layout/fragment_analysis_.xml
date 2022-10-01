@@ -16,64 +16,119 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"  />-->
 
-        <androidx.cardview.widget.CardView
+        <GridLayout
+            android:id="@+id/gridLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="8dp"
-            app:cardCornerRadius="4dp"
-            android:layout_margin="10dp"
-            android:id="@+id/cardView">
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:layout_below="@id/piechart"
+            android:rowCount="3">
 
-            <RelativeLayout
-                android:visibility="gone"
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:id="@+id/linux"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_baseline_access_time_24"
-                    android:id="@+id/imgView1"/>
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/time"
+                    />
 
                 <TextView
-                    android:id="@+id/textView1"
-                    android:layout_toRightOf="@id/imgView1"
-                    android:layout_marginLeft="10dp"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="View Test History"/>
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text=" Test History \n"
+                    android:textColor="#6f6f6f"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:id="@+id/docker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/chart2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Subject Wise\nAnalysis"
+                    android:textColor="#6f6f6f"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </GridLayout>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cardView"
             android:text="Test Submissions"
             android:textSize="14sp"
+            android:layout_marginTop="16dp"
             android:textStyle="bold"
             android:layout_marginLeft="10dp"
             android:fontFamily="sans-serif"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechart"
-            android:layout_below="@id/textView2"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="450dp" />
+            android:layout_height="450dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/piechart"
+            android:layout_below="@id/gridLayout2"
             android:text="Daily Study Hours"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -82,10 +137,13 @@
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/barChart"
-            android:layout_below="@id/textView3"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="350dp" />
+            android:layout_height="350dp"
+            android:layout_below="@id/textView3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
 
     </RelativeLayout>
 </ScrollView>
