@@ -9,6 +9,13 @@
         android:id="@+id/enginerv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/books_engine"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="290dp"
+        android:src="@drawable/ic_baseline_library_books_24"
+        android:layout_height="wrap_content"/>
 
 
 </FrameLayout>
