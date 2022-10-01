@@ -2,6 +2,7 @@ package com.hackathon.chegg;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
@@ -35,9 +37,9 @@ public class Information extends AppCompatActivity {
         String name = i.getStringExtra("name_of_module");
        ExtendedFloatingActionButton fb = findViewById(R.id.extended_fab);
        fb.setVisibility(View.INVISIBLE);
-        LinearLayoutCompat l = findViewById(R.id.l);
-        TextView title = l.findViewById(R.id.title);
-        TextView content = l.findViewById(R.id.content);
+//        LinearLayoutCompat l = findViewById(R.id.l);
+        CollapsingToolbarLayout title = findViewById(R.id.ToolBarForTitle);
+        TextView content = findViewById(R.id.content);
         InfoDataClass info = new InfoDataClass(this);
         info.getInfo( name, new InfoDataClass.VolleyResponseListener() {
             @Override
@@ -56,7 +58,7 @@ public class Information extends AppCompatActivity {
                     String title1 = first.getString("title");
                     String content1 = first.getString("extract");
 
-                    title.setText(title1);
+                    title.setTitle(title1);
 
                     content.setText(content1);
                     progressIndicator.setVisibility(View.INVISIBLE);
