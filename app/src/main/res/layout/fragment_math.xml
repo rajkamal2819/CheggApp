@@ -7,9 +7,38 @@
     tools:context=".Fragments.MathFragment">
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <LinearLayout
+
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mathtostudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_button"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="-30dp"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textColor="@color/colorprimary"
+                android:text="Mathematics"/>
+
+        </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/ShapesCard"

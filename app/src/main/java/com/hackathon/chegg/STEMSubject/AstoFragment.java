@@ -12,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
-import com.hackathon.chegg.BookActivity;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -32,7 +30,6 @@ public class AstoFragment extends Fragment implements ModuleAdapter.onClickListe
     private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
-    FloatingActionButton btn;
 
 
     @Override
@@ -57,15 +54,7 @@ public class AstoFragment extends Fragment implements ModuleAdapter.onClickListe
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
-        btn = view.findViewById(R.id.books_astro);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getContext(), BookActivity.class);
-                i.putExtra("query","planets");
-                startActivity(i);
-            }
-        });
+
 
         return view;
     }

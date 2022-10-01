@@ -9,6 +9,8 @@
     android:background="@color/background_color"
     tools:context=".Fragments.Study_Fragment">
 
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/study_heading"
         android:layout_width="match_parent"
