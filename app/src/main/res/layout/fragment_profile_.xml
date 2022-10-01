@@ -87,51 +87,51 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/colorprimary"
-                android:textSize="21sp"
-                android:text="College : "/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/colorprimary"-->
+<!--                android:textSize="21sp"-->
+<!--                android:text="College : "/>-->
 
-            <TextView
-                android:id="@+id/userClg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="21sp"
-                android:text="Thadomal Shahni Engineering College"/>
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/userClg"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="21sp"-->
+<!--                android:text="Thadomal Shahni Engineering College"/>-->
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/colorprimary"
-                android:textSize="21sp"
-                android:text="Location : "/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/colorprimary"-->
+<!--                android:textSize="21sp"-->
+<!--                android:text="Location : "/>-->
 
-            <TextView
-                android:id="@+id/userLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="21sp"
-                android:text="Mumbai"/>
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/userLocation"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="21sp"-->
+<!--                android:text="Mumbai"/>-->
+<!--        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
