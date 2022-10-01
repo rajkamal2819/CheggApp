@@ -1,5 +1,7 @@
 package com.hackathon.chegg;
 
+import static com.hackathon.chegg.STEMSubject.AstoFragment.MODEL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -47,10 +49,10 @@ public class BookActivity extends AppCompatActivity {
 
         // initializing our views.
         progressBar = findViewById(R.id.idLoadingPB);
-         Intent i = new Intent();
-         String query = i.getStringExtra("query");
-//         Log.d("query",query);
-         Toast.makeText(this,query,Toast.LENGTH_SHORT).show();
+         Intent i = getIntent();
+         String query = i.getStringExtra(MODEL);
+         Log.d("query",query+" is the query");
+
         getBooksInfo(query);
         // initializing on click listener for our button.
 
