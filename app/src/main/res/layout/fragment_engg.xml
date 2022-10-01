@@ -11,6 +11,32 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/enggtostudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_button"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="-30dp"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textColor="@color/colorprimary"
+                android:text="Engineering"/>
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/EngineCard"
             android:elevation="10dp"

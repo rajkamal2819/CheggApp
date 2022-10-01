@@ -14,6 +14,8 @@
     <color name="colorprimary">#0042A6</color>
     <color name="blue_700">#0042A6</color>
 
+    <color name="cardback">#FFFFF7</color>
+
     <color name="light_purple">#450159</color>
     <color name="dark_purple">#261831</color>
     <color name="purple">#CC99FF</color>

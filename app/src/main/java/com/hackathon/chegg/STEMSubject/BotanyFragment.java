@@ -4,15 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.Fragments.EnggFragment;
+import com.hackathon.chegg.Fragments.ScienceFragment;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -97,6 +101,16 @@ public class BotanyFragment extends Fragment implements ModuleAdapter.onClickLis
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
+
+        ImageButton back = view.findViewById(R.id.backtosci);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new ScienceFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
 
         return view;
     }
