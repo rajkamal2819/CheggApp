@@ -22,7 +22,6 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
     private List<String> modulesList;
     private onClickListener mOnClickListener;
     Context context;
-
     public ModuleAdapter(List<String> modulesList, onClickListener mOnClickListener) {
         this.modulesList = modulesList;
         this.mOnClickListener = mOnClickListener;

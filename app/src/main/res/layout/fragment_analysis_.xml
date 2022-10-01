@@ -11,11 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!--<com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/chart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"  />-->
-
         <GridLayout
             android:id="@+id/gridLayout2"
             android:layout_width="match_parent"
@@ -38,7 +33,7 @@
             app:cardElevation="3dp">
 
             <LinearLayout
-                android:id="@+id/linux"
+                android:id="@+id/testHistory"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -75,7 +70,7 @@
             app:cardElevation="3dp">
 
             <LinearLayout
-                android:id="@+id/docker"
+                android:id="@+id/subjectWiseAnalysis"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
