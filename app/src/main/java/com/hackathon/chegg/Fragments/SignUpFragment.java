@@ -1,6 +1,8 @@
 package com.hackathon.chegg.Fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hackathon.chegg.MainActivity;
 import com.hackathon.chegg.databinding.FragmentSignUpBinding;
 import com.hackathon.chegg.services.authentication.AuthService;
@@ -59,15 +62,16 @@ public class SignUpFragment extends Fragment {
             public void onClick(View view) {
                 String emailText=binding.emailIdSignUp.getText().toString();
                 String passwordText=binding.passwordSignUp.getText().toString();
+                String name=binding.userName.getText().toString();
 
                 if(emailText.isEmpty() || passwordText.isEmpty())
                     Toast.makeText(getContext(), "Please enter the empty fields", Toast.LENGTH_SHORT).show();
                 if(passwordText.length()<6)
                     Toast.makeText(getContext(), "Password must be greater than 6 characters", Toast.LENGTH_SHORT).show();
-                AuthService authService=new AuthService(FirebaseAuth.getInstance());
+                AuthService authService=new AuthService(FirebaseAuth.getInstance(), FirebaseFirestore.getInstance());
 
 
-                authService.signUpUser(emailText,passwordText,getContext());
+                authService.signUpUser(emailText,passwordText,name,getContext());
 
 
 

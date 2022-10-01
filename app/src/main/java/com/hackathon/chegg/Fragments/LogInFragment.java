@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hackathon.chegg.R;
 import com.hackathon.chegg.databinding.FragmentLogInBinding;
 import com.hackathon.chegg.databinding.FragmentSignUpBinding;
@@ -51,7 +52,7 @@ public class LogInFragment extends Fragment {
                     Toast.makeText(getContext(), "Please enter the empty fields", Toast.LENGTH_SHORT).show();
                 if(passwordText.length()<6)
                     Toast.makeText(getContext(), "Password must be greater than 6 characters", Toast.LENGTH_SHORT).show();
-                AuthService authService=new AuthService(FirebaseAuth.getInstance());
+                AuthService authService=new AuthService(FirebaseAuth.getInstance(), FirebaseFirestore.getInstance());
 
 
                 authService.signInUser(emailText,passwordText,getContext());

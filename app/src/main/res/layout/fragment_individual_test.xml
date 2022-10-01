@@ -1,61 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.tests.IndividualTestFragment"
     android:background="#ECF0F3"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Fragments.tests.IndividualTestFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/topic_name"
-        android:textColor="#5E5E5E"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="monospace"
-        android:text="Docker"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        />
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 6/15"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="15sp"
-        android:textColor="@color/blue_500"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/question"
-        android:textColor="#5E5E5E"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="5dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="monospace"
-        android:text="What is Docker and explain its importance"
-        android:textStyle="bold"
-        android:textSize="28sp"
-        />
 
-    <androidx.recyclerview.widget.RecyclerView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/topic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="Docker"
+            android:textColor="#3A3A3A"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:text="22:10"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/questions_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        tools:listitem="@layout/option_list"
 
-        />
-
-
+        android:orientation="horizontal"
+        tools:listitem="@layout/individual_questions" />
 
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="next"
+        android:textSize="17sp" />
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
