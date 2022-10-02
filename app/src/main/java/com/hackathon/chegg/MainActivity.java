@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Study_Fragment()).commit();
 
         SharedPreferences sf=getSharedPreferences("ShredPref", Context.MODE_PRIVATE);
-
+        //this is my section
 
         //new AuthService(FirebaseAuth.getInstance(),FirebaseFirestore.getInstance()).saveUserDetails(emailText,name, FirebaseAuth.getInstance().getUid());
 
