@@ -1,5 +1,6 @@
 package com.hackathon.chegg.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -13,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.R;
+import com.hackathon.chegg.WebViewActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +30,7 @@ public class Study_Fragment extends Fragment {
     private CardView engg;
     private CardView tech;
     private CardView maths;
-
+    private FloatingActionButton fb;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -77,6 +81,7 @@ public class Study_Fragment extends Fragment {
         maths = view.findViewById(R.id.MathsCard);
         tech = view.findViewById(R.id.TechnologyCard);
         engg = view.findViewById(R.id.EngineeringCard);
+        fb = view.findViewById(R.id.floatingbutton);
 
         science.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,6 +155,12 @@ public class Study_Fragment extends Fragment {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, new Profile_Fragment(), "NewFragmentTag");
                 ft.commit();
+            }
+        });
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), WebViewActivity.class));
             }
         });
 

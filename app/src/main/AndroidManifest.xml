@@ -17,6 +17,13 @@
         android:theme="@style/Theme.CheggApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".WebViewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".BookDetails"
             android:exported="false">
             <meta-data
@@ -30,7 +37,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".SubjectWiseAnalyisis"
             android:exported="false">
