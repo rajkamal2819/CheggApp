@@ -105,6 +105,43 @@ public class SubjectWiseAnalyisis extends AppCompatActivity {
                 dataVals.add(new Entry(7,77));
                 dataVals.add(new Entry(8,46));
                 break;
+
+            case "Html":
+                dataVals.add(new Entry(0,70));
+                dataVals.add(new Entry(1,6));
+                dataVals.add(new Entry(2,58));
+                dataVals.add(new Entry(3,99));
+                dataVals.add(new Entry(4,10));
+                dataVals.add(new Entry(5,56));
+                dataVals.add(new Entry(6,48));
+                dataVals.add(new Entry(7,48));
+                dataVals.add(new Entry(8,46));
+                break;
+
+            case "Bash":
+                dataVals.add(new Entry(0,49));
+                dataVals.add(new Entry(1,80));
+                dataVals.add(new Entry(2,67));
+                dataVals.add(new Entry(3,90));
+                dataVals.add(new Entry(4,10));
+                dataVals.add(new Entry(5,56));
+                dataVals.add(new Entry(6,80));
+                dataVals.add(new Entry(7,77));
+                dataVals.add(new Entry(8,46));
+                break;
+
+            case "WordPress":
+                dataVals.add(new Entry(0,67));
+                dataVals.add(new Entry(1,88));
+                dataVals.add(new Entry(2,0));
+                dataVals.add(new Entry(3,90));
+                dataVals.add(new Entry(4,55));
+                dataVals.add(new Entry(5,56));
+                dataVals.add(new Entry(6,8));
+                dataVals.add(new Entry(7,77));
+                dataVals.add(new Entry(8,46));
+                break;
+
         }
         return dataVals;
     }
