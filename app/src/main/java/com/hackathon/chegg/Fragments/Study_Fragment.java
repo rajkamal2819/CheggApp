@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.hackathon.chegg.R;
 
@@ -139,6 +140,16 @@ public class Study_Fragment extends Fragment {
                         .commit();
 
 
+            }
+        });
+
+        ImageView profie = view.findViewById(R.id.profile);
+        profie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new Profile_Fragment(), "NewFragmentTag");
+                ft.commit();
             }
         });
 
