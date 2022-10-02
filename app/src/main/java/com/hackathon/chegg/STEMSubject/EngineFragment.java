@@ -6,17 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
 import com.hackathon.chegg.BookActivity;
+import com.hackathon.chegg.Fragments.EnggFragment;
+import com.hackathon.chegg.Fragments.TechFragment;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -34,7 +39,7 @@ public class EngineFragment extends Fragment implements ModuleAdapter.onClickLis
     private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
-    private FloatingActionButton btn;
+    private ExtendedFloatingActionButton btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -104,6 +109,18 @@ public class EngineFragment extends Fragment implements ModuleAdapter.onClickLis
                 startActivity(i);
             }
         });
+
+        ImageButton back = view.findViewById(R.id.backtoengg);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new EnggFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+
         return view;
     }
 

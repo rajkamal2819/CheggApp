@@ -16,12 +16,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
 import com.hackathon.chegg.BookActivity;
 import com.hackathon.chegg.Fragments.EnggFragment;
 import com.hackathon.chegg.Fragments.Study_Fragment;
+import com.hackathon.chegg.Fragments.TechFragment;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -39,7 +41,7 @@ public class ToolsFragment extends Fragment implements ModuleAdapter.onClickList
     private List<ModuleModel> nameL;
     private ModuleAdapter mModuleAdapter;
     private RecyclerView rv;
-    private FloatingActionButton btn;
+    private ExtendedFloatingActionButton btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -121,6 +123,8 @@ public class ToolsFragment extends Fragment implements ModuleAdapter.onClickList
                 startActivity(i);
             }
         });
+
+
         return view;
     }
 

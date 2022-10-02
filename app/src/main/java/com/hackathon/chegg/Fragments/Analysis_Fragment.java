@@ -1,5 +1,6 @@
 package com.hackathon.chegg.Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -22,6 +23,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.hackathon.chegg.R;
+import com.hackathon.chegg.SubjectWiseAnalyisis;
+import com.hackathon.chegg.TestHistoryActivity;
 import com.hackathon.chegg.databinding.FragmentAnalysisBinding;
 
 import java.lang.reflect.Array;
@@ -70,6 +73,19 @@ public class Analysis_Fragment extends Fragment {
         barData.addDataSet(barDataSet);
         binding.barChart.setData(barData);
         binding.barChart.invalidate();
+
+        binding.subjectWiseAnalysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), SubjectWiseAnalyisis.class));
+            }
+        });
+        binding.testHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), TestHistoryActivity.class));
+            }
+        });
 
 
         return binding.getRoot();
