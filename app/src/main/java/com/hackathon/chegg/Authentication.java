@@ -14,7 +14,7 @@ import com.hackathon.chegg.Adapters.FragmentAdapter;
 import com.hackathon.chegg.databinding.ActivityAuthenticationBinding;
 
 public class Authentication extends AppCompatActivity {
-
+//hello
 
     private static final String TAG = Authentication.class.getSimpleName();
     private ViewPager viewPager;
