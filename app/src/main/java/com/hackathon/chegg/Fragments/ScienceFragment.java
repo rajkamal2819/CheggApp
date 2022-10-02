@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.hackathon.chegg.Augmented;
 import com.hackathon.chegg.Information;
@@ -17,6 +18,7 @@ import com.hackathon.chegg.R;
 import com.hackathon.chegg.STEMSubject.AstoFragment;
 import com.hackathon.chegg.STEMSubject.BonesFragment;
 import com.hackathon.chegg.STEMSubject.BotanyFragment;
+import com.hackathon.chegg.STEMSubject.ChemFragment;
 
 
 public class ScienceFragment extends Fragment {
@@ -24,7 +26,7 @@ public class ScienceFragment extends Fragment {
     private CardView chem;
     private CardView bones;
     private CardView botany;
-
+    private ImageButton back;
 
 
     public ScienceFragment() {
@@ -47,7 +49,10 @@ public class ScienceFragment extends Fragment {
         chem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Augmented.class));
+//                startActivity(new Intent(getActivity(), Augmented.class));
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new ChemFragment(), "NewFragmentTag");
+                ft.commit();
             }
         });
 
@@ -67,6 +72,16 @@ public class ScienceFragment extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, new BotanyFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        back = (ImageButton) v.findViewById(R.id.bacttostudy);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new Study_Fragment(), "NewFragmentTag");
                 ft.commit();
             }
         });

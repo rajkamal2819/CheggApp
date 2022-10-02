@@ -1,5 +1,6 @@
 package com.hackathon.chegg.Fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.hackathon.chegg.R;
 import com.hackathon.chegg.STEMSubject.ShapesFragment;
@@ -21,6 +23,7 @@ import com.hackathon.chegg.STEMSubject.ShapesFragment;
 public class MathFragment extends Fragment {
 
     private CardView shapes;
+    private ImageButton back;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,6 +65,7 @@ public class MathFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -75,6 +79,16 @@ public class MathFragment extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container, new ShapesFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
+
+        back = view.findViewById(R.id.mathtostudy);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, new Study_Fragment(), "NewFragmentTag");
                 ft.commit();
             }
         });

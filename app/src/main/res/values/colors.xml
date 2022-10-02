@@ -9,8 +9,12 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="blue_200">#6DA5FA</color>
-    <color name="blue_500">#2277F6</color>
+
+    // For changing bottom nav, change here
+    <color name="colorprimary">#0042A6</color>
     <color name="blue_700">#0042A6</color>
+
+    <color name="cardback">#FFFFF7</color>
 
     <color name="light_purple">#450159</color>
     <color name="dark_purple">#261831</color>
@@ -28,6 +32,22 @@
     <color name="card5">#e27c6f</color>
     <color name="card6">#c9e3db</color>
     <color name="card7">#86d098</color>
+
+
+    <color name="blue">#216afc</color>
+    <color name="green">#008643</color>
+    <color name="orange">#ff9045</color>
+    <color name="indicatorColor">#2DFFFFFF</color>
+    <color name="iconTint">#C8FFFFFF</color>
+    <color name="iconTintActive">#ffffff</color>
+
+<!--    <color name="colorPrimary">#432fbf</color>-->
+    <color name="colorPrimaryDark">#432fbf</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="background_color">#ffffff</color>
+    <color name="colorBadge">#f4d415</color>
 
 
 </resources>

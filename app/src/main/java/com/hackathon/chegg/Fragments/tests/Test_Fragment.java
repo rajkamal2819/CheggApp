@@ -52,7 +52,7 @@ public class Test_Fragment extends Fragment {
         binding.cms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bundle.putString("subject","CMS");
+                bundle.putString("subject","cms");
                 individualTestFragment.setArguments(bundle);
 
                 getActivity().getSupportFragmentManager().beginTransaction()
@@ -67,7 +67,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","Bash");
+                bundle.putString("subject","bash");
                 individualTestFragment.setArguments(bundle);
 
                 getActivity().getSupportFragmentManager().beginTransaction()
@@ -82,7 +82,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","Code");
+                bundle.putString("subject","code");
                 individualTestFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container,individualTestFragment)
@@ -96,7 +96,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","DevOps");
+                bundle.putString("subject","devops");
                 individualTestFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container,individualTestFragment)
@@ -110,7 +110,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","Docker");
+                bundle.putString("subject","docker");
                 individualTestFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container,individualTestFragment)
@@ -124,7 +124,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","Linux");
+                bundle.putString("subject","linux");
                 individualTestFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container,individualTestFragment)
@@ -138,7 +138,7 @@ public class Test_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                bundle.putString("subject","SQL");
+                bundle.putString("subject","sql");
                 individualTestFragment.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container,individualTestFragment)

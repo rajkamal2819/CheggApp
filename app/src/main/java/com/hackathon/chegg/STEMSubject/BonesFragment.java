@@ -1,5 +1,7 @@
 package com.hackathon.chegg.STEMSubject;
 
+import static com.hackathon.chegg.STEMSubject.AstoFragment.MODEL;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.hackathon.chegg.Adapters.ModuleAdapter;
 import com.hackathon.chegg.Augmented;
+import com.hackathon.chegg.BookActivity;
 import com.hackathon.chegg.Information;
 import com.hackathon.chegg.R;
 
@@ -31,6 +35,7 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
     private ModuleAdapter mModuleAdapter;
     private List<String> wikinames;
     private RecyclerView rv;
+    private FloatingActionButton btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -85,6 +90,11 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
         nameL.add(new ModuleModel("Heart","human_heart","Heart"));
         nameL.add(new ModuleModel("Sacrum","human_sacrum","Sacrum"));
         nameL.add(new ModuleModel("Thoracic vertebrae","human_thoracic_vertebra_t5_or_t6","Thoracic_vertebrae"));
+        nameL.add(new ModuleModel("Pygmy hippopotamus","pygmy_hippopotamus","Pygmy_hippopotamus"));
+        nameL.add(new ModuleModel("Armadillo","armadillo","Armadillo"));
+        nameL.add(new ModuleModel("Greater mouse-eared bat","myotis_myotis","Greater_mouse-eared_bat"));
+        nameL.add(new ModuleModel("Blue Whale","nhm_blue_whale_6k","Blue_whale"));
+        nameL.add(new ModuleModel("Human Skull","rojo-hs-1___human_skull","Skull#Humans"));
 
 
         List<String> names = nameL.stream().map(ModuleModel::getName).collect(Collectors.toList());
@@ -94,7 +104,15 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
         rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(mModuleAdapter);
-
+        btn = view.findViewById(R.id.books_bones);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), BookActivity.class);
+                i.putExtra(MODEL,"osteology");
+                startActivity(i);
+            }
+        });
         return view;
     }
 
@@ -102,7 +120,7 @@ public class BonesFragment extends Fragment implements ModuleAdapter.onClickList
     public void onItemClick(int position) {
         Intent intent = new Intent(getActivity(), Information.class);
         intent.putExtra(AstoFragment.NAME,nameL.get(position).getWikiname());
-        intent.putExtra(AstoFragment.MODEL,nameL.get(position).getModel());
+        intent.putExtra(MODEL,nameL.get(position).getModel());
         startActivity(intent);
     }
 
