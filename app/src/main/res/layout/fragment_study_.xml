@@ -84,7 +84,7 @@
         android:layout_weight="95"
         android:layout_marginBottom="50dp"
         android:orientation="vertical">
-//hello
+
         <androidx.cardview.widget.CardView
             android:id="@+id/ScienceCard"
             android:layout_width="match_parent"
