@@ -50,6 +50,8 @@ class IndividualTestFragment : Fragment() {
         if (bundle!=null)
         testViewModel.getQuizQuestions(bundle.getString("subject").toString())
 
+        binding.topicName.text=bundle?.getString("subject").toString()
+
         testViewModel.questionsList.observe(viewLifecycleOwner) {
             Log.v("List details", it.toString())
             binding.questionsRecyclerView.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
@@ -61,7 +63,7 @@ class IndividualTestFragment : Fragment() {
         binding.chronometer.base=SystemClock.elapsedRealtime()-pasueOffset
 
         binding.chronometer.start()
-
+        testViewModel.position.value=0
         binding.nextButton.setOnClickListener{
             testViewModel.checkAnswers(testViewModel.position.value!!)
             testViewModel.increasePos()

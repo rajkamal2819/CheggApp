@@ -63,7 +63,14 @@ class IndividualQuestionsListAdapter(
 
             binding.question.text = question
 
+
             val selectedAnswers=SelectedAnswers()
+            binding.checkBox1.isChecked=false;
+            binding.checkBox2.isChecked=false;
+            binding.checkBox3.isChecked=false;
+            binding.checkBox4.isChecked=false;
+            binding.checkBox5.isChecked=false;
+            binding.checkBox6.isChecked=false;
             binding.checkBox1.setOnClickListener { selectedAnswers.answerASelected=binding.checkBox1.isChecked.toString() }
             binding.checkBox2.setOnClickListener { selectedAnswers.answerBSelected=binding.checkBox2.isChecked.toString() }
             binding.checkBox3.setOnClickListener { selectedAnswers.answerCSelected=binding.checkBox3.isChecked.toString() }
