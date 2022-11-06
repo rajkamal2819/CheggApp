@@ -14,12 +14,13 @@ import com.hackathon.chegg.Adapters.FragmentAdapter;
 import com.hackathon.chegg.databinding.ActivityAuthenticationBinding;
 
 public class Authentication extends AppCompatActivity {
-
+//hello
 
     private static final String TAG = Authentication.class.getSimpleName();
     private ViewPager viewPager;
     private TabLayout tabLayout;
-
+//done chatbot ar books api but mistakenly did it with other email thats why not showing in contrubtors but you can see my commits
+    //in commit section as Anii232002
     ActivityAuthenticationBinding binding;
     FloatingActionButton googleAuthBtn;
 
